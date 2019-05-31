@@ -18,7 +18,9 @@ $ terraform apply
 Note that this example may create resources which cost money. Run terraform destroy when you don't need these resources.
 
 Found different approaches how to use variables:
+
 --- I - to set the region in execution time:
+
 variable "region" {} is used in scripts but is not set
 region  = "${var.region}"
 While executing the Terraform it should be set
@@ -26,6 +28,7 @@ terraform plan -var region=eu-west-1
 terraform apply -var region=eu-west-1
 
 --- II - to use files with predefined variables:
+
 variable "region" {} is used in scripts but is not set
 
 There is an additional file ./modules/terraform.tfvars in which
